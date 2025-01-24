@@ -6,7 +6,7 @@ import pickle
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
 # Load the model
-model = tf.keras.models.load_model('ANN_regression_model.h5')
+model = tf.keras.models.load_model('Updated_ANN_regression_model.h5')
 
 # Load the encoders and scaler
 with open('lable_Encoding_gender.pkl', 'rb') as file:
@@ -64,6 +64,4 @@ predicted_salary = model.predict(scaled_input_features)
 predicted_salary = predicted_salary[0][0]
 
 # Display the prediction on streamlit
-st.write("The Estimated Salary is :", predicted_salary)
-
-    
+st.write("The Estimated Salary is :", predicted_salary)   
