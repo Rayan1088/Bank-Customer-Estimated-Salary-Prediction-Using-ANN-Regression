@@ -63,5 +63,9 @@ scaled_input_features = feature_scaler.transform(input_features_df)
 predicted_salary = model.predict(scaled_input_features)
 predicted_salary = predicted_salary[0][0]
 
-# Display the prediction on streamlit
-st.write("The Estimated Salary is :", predicted_salary)   
+# Add a button to trigger prediction
+if st.button('Predict Salary'):
+    # Display the prediction on streamlit
+    st.write("The Estimated Salary is :", predicted_salary)
+
+    
